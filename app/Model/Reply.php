@@ -3,17 +3,16 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
-
 class Reply extends Model
 {
     public function question()
     {
-        return $this->belongsTo('App\Question');
+        return $this->belongsTo('App\Model\Question');
     }
 
     public function like()
     {
-        return $this->hasMany('App\Like');
+        return $this->hasMany('App\Model\Like');
     }
 
     public function user()
